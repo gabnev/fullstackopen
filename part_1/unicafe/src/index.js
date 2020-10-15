@@ -13,7 +13,11 @@ const Statistics = (props) => {
   if (props.allClicks.length === 0) {
     return (
       <>
-        <p>No feedback given</p>
+        <tr>
+          <td>
+            <p>No feedback given</p>
+          </td>
+        </tr>
       </>
     )
   }
@@ -144,9 +148,7 @@ const App = () => {
               <p><strong>Statistics</strong></p>
             </td>
           </tr>
-          <tr>
-            <Statistics allClicks={allClicks} good={good} neutral={neutral} bad={bad} />            
-          </tr>
+            <Statistics allClicks={allClicks} good={good} neutral={neutral} bad={bad} />
         </tbody>
       </table>
     </div>

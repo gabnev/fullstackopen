@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom'
 
 const Statistics = (props) => {
 
+  // If no votes . . .
+
   if(props.allClicks.length === 0) {
     return (
       <div>
@@ -13,11 +15,16 @@ const Statistics = (props) => {
     )
   }
 
+  // Average
+
   let avg = 0;
   props.allClicks.forEach((click) => {
     avg += click
   })
+
   avg = avg / props.allClicks.length
+
+  // Positive Average
 
   let positive = 0;
   props.allClicks.forEach((click) => {
@@ -27,7 +34,6 @@ const Statistics = (props) => {
   })
 
   positive = positive / props.allClicks.length
-  console.log('After avg ', positive)
 
   return (
     <div>
